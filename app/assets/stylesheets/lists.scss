@@ -5,7 +5,7 @@ header {
   color: white;
   text-align: center;
   text-shadow: 5px 5px 5px #0E0000;
-  background-image: image-url("default.jpg");
+  background-image: asset-url("default.jpg");
   background-size: cover;
   background-position: center;
   padding: 150px 20px;
@@ -52,7 +52,6 @@ main h2 {
     width: 300px;
     padding-top: 130px;
     text-decoration: none;
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4));
   }
 
   .add-list {
@@ -80,7 +79,6 @@ main h2 {
 }
 
 .all-lists {
-  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4));
   background-size: cover;
   background-position: center;
 

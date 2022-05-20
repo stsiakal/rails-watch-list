@@ -5,7 +5,7 @@
   <ul class="list-cards">
     <% @lists.each do |list| %>
       <li>
-      <div style="background-image: url('default.jpg');"></div>
+      <div style="background-image: asset-url('default.jpg');"></div>
         <%= link_to list.name, list_path(list) %>
       </li>
     <% end %>
