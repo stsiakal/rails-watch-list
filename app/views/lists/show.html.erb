@@ -1,4 +1,4 @@
-<div id="list-<%= @list.name.parameterize %>" class="position-relative list-cover all-lists">
+<div id="list-<%= @list.name.parameterize %>" class="position-relative list-cover all-lists" style="background-image: url('<%= cl_image_path @list.photo.key, width: 1200, crop: :fill %>');">
   <div class="card-category card-large">
     <h1><%= @list.name %></h1>
   </div>
@@ -10,6 +10,7 @@
     <div>
       <%= link_to 'add a movie', new_list_bookmark_path(@list), class: 'btn btn-flat' %>
       <%= link_to 'delete this list', list_path(@list), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure you want to delete this list?' } %>
+      <%= link_to 'return home', lists_path, class: 'btn btn-flat'%>
     </div>
   </div>
   <div class="row my-2">
@@ -17,7 +18,7 @@
       <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
       <div class="col-12 col-sm-6 mb-4" data-aos="zoom-in">
         <div class="bg-white rounded shadow h-100">
-          <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top'%>
+          <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top' %>
           <div class="p-3 rounded-bottom d-flex flex-column">
             <strong><%= movie.title %> <span class="text-muted font-weight-normal">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span></strong>
             <small class="text-muted"><%= movie.overview %></small>
